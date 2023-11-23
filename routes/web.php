@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SoalController;
 use App\Http\Controllers\UserController;
 
 /*
@@ -26,6 +27,7 @@ Route::get('/', function () {
         return view('pages.dashboard');
     })->name('home');
     Route::resource('user', UserController::class);
+    Route::resource('soal', SoalController::class);
  });
 // Route::get('/login', function () {
 //     return view('pages.auth.login');
